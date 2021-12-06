@@ -8,6 +8,7 @@
     --yellow: #fff200;
     --background-color-1: #3f5a5f;
     --background-color-2: #374f53;
+    --footer: #e9e7e8;
 }
 
 *,
@@ -238,8 +239,21 @@ form span {
 
 /* Footer */
 
+footer {
+    background-color: var(--footer);
+}
+
+footer .flex {
+    justify-content: space-between;
+    align-items: center;
+}
+
 footer .logo {
     width: 168px;
+}
+
+footer .logo2 {
+    width: 150px;
 }
 
 /* Media Query - Mobile */
