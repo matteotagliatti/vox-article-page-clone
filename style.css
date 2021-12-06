@@ -1,0 +1,308 @@
+@font-face {font-family: Balto; src: url(/font/baltoweb-bold.woff2);}
+@font-face {font-family: Balto Book; src: url(/font/baltoweb-book.woff2);}
+
+:root {
+    --text-color: #4c4e4d;
+    --cite-color: rgb(98, 98, 98, 0.75);
+    --link-color: #4f7177;
+    --yellow: #fff200;
+    --background-color-1: #3f5a5f;
+    --background-color-2: #374f53;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    color: var(--text-color);
+    font-size: 18px;
+    text-rendering: optimizeLegibility;
+}
+
+::selection {
+    background-color: var(--yellow);
+}
+
+h1, h2, h3 {font-family: Balto, Helvetica, sans-serif;}
+p, a, span, figcaption, label, input {font-family: Balto Book, Helvetica, sans-serif;}
+a {text-decoration: none;}
+
+h1 {font-size: 2.5em; margin-bottom: 0.6rem;}
+p {line-height: 27px;}
+a {color: var(--link-color);}
+
+/* Header */
+
+header {
+    margin-bottom: 6px;
+    min-height: 100vh;
+    background-image: url(/img/header.jpeg);
+    background-size: cover;
+}
+
+header .logo {
+    position: absolute;
+    left: 36px;
+    top: 36px;
+    height: 50px;
+}
+
+.cite {
+    margin-left: 16px;
+    font-size: 0.75em;
+    color: var(--cite-color);
+}
+
+/* Main */
+
+main {
+    margin: 12px auto 100px auto;
+    max-width: 762px;
+}
+
+.summary {
+    margin-bottom: 0.6rem;
+    font-size: 1.25em;
+}
+
+.info {
+    font-size: 14.4px;
+}
+
+/* Main - Social */
+
+.social {
+    margin: 32px 0;
+    display: flex;
+    align-items: center;
+    gap: 30px
+}
+
+.social .share {
+    font-size: 11.25px;
+    letter-spacing: 1.125px;
+    text-transform: uppercase;
+    color: var(--cite-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social img {
+    height: 21px;
+}
+
+/* Main - Content */
+
+.content p {
+    margin-bottom: 1.2rem;
+}
+
+.content a {
+    font-family: Balto;
+}
+
+figure {
+    margin: 0 5% 5px 0;
+    width: 45%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #d1d1d1;
+}
+
+figcaption {
+    margin: 8px 0;
+    font-size: 0.75em;
+    line-height: 20.25px;
+}
+
+figcaption span {
+    opacity: .75;
+}
+
+.content hr {
+    margin: 32px 0;
+    border-bottom: 3px solid var(--yellow);
+    color: var(--yellow);
+}
+
+/* Main - Article Footer */
+
+.article-footer > a {
+    display: block;
+    margin-bottom: 1.2rem;
+}
+
+/* Suggestions */
+
+.suggestions {
+    display: flex;
+}
+
+.suggestions a {
+    padding: 32px 32px 50px 32px;
+}
+
+.suggestions a:nth-child(odd) {
+    background-color: var(--background-color-1);
+}
+
+.suggestions a:nth-child(even) {
+    background-color: var(--background-color-2);
+}   
+
+.suggestions span, h3 {
+    color: white;
+}
+
+.suggestions span {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 13.5px;
+    text-transform: uppercase;
+}
+
+.suggestions h3 {
+    font-size: 25.92px;
+}
+
+/* View All Link */
+
+.view-all {
+    display: block;
+    margin: 16px auto 50px auto;
+    text-align: center;
+}
+
+/* Newsletter */
+
+.newsletter {
+    background-color: var(--link-color);
+    color: white;
+    border-bottom: 8px solid var(--yellow);
+}
+
+.wrapper {
+    margin: 0 auto;
+    padding: 36px;
+    max-width: 1100px;
+    display: flex;
+    align-items: center;
+}
+
+.newsletter div {
+    flex: 1 1 50%;
+}
+
+.newsletter h2 {
+    font-size: 28px;
+}
+
+/* Newsletter - Form */
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+form input {
+    padding: 12px 8px;
+    font-size: 16px;
+    border-color: var(--link-color);
+}
+
+form input[type="email"] {
+    width: 70%;
+}
+
+form input[type="button"] {
+    width: 25%;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    background-color: var(--yellow);
+}
+
+form span {
+    display: block;
+    margin-top: 8px;
+    font-size: 0.7em;
+    line-height: 1.5;
+}
+
+/* Footer */
+
+footer .logo {
+    width: 168px;
+}
+
+/* Media Query - Mobile */
+
+@media (max-width: 767px) {
+    h1 {
+        font-size: 37.5px;
+    }
+
+    header {
+        min-height: 220px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-bottom: 0;
+    }
+
+    header .logo {
+        left: 15px;
+        top: 15px;
+        height: 40px;
+    }
+
+    .cite, .info {
+        font-size: 11.25px;
+    }
+
+    .summary {
+        margin-bottom: 0px;
+    }
+
+    main {
+        padding: 16px;
+    }
+
+    .summary {
+        font-size: 18.75px;
+    }
+
+    figure {
+        width: 100%;
+    }
+
+    .suggestions, .wrapper {
+        flex-direction: column;
+    }
+
+    .wrapper {
+        padding: 32px 16px;
+    }
+
+    .wrapper h2, .wrapper p {
+        text-align: center;
+    }
+
+    form label {
+        margin-top: 10px;
+    }
+
+    form input[type="email"] {
+        width: 50%;
+    }
+
+    form input[type="button"] {
+        width: 45%;;
+    }
+  }
