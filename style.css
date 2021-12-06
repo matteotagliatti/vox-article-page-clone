@@ -42,7 +42,7 @@ a {color: var(--link-color);}
 header {
     margin-bottom: 6px;
     min-height: 100vh;
-    background-image: url(/img/header.jpeg);
+    background-image: url(img/header.jpeg);
     background-size: cover;
 }
 
